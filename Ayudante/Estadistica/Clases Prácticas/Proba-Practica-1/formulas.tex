@@ -1,0 +1,112 @@
+\documentclass[a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage[spanish]{babel}
+\usepackage{amsmath, amssymb}
+\usepackage{tcolorbox}
+
+%Programing
+\usepackage{listings}
+\usepackage{xcolor}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+
+
+% figure support
+\usepackage{import}
+\usepackage{xifthen}
+\pdfminorversion=7
+\usepackage{pdfpages}
+\usepackage{transparent}
+\newcommand{\incfig}[1]{%
+	\def\svgwidth{\columnwidth}
+	\import{./figures/}{#1.pdf_tex}
+}
+
+\pdfsuppresswarningpagegroup=1
+\lstset{style=mystyle}
+
+
+\title{ Clase Probabilidad}
+
+\author{Matías Sanchez Gavier }
+
+\begin{document}
+\maketitle
+
+\section{Probabilidad Condicionada}
+	
+
+\begin{tcolorbox}[title=Probabilidad Condicionada]
+Probabilidad de $A$ dado $B$ 
+\tcblower
+
+\[
+	P(A|B) = \frac{P(A \cap B)}{ P(B) }
+.\] 
+\end{tcolorbox}
+
+
+
+Si dos eventos son {\color{blue} independientes}  entonces:
+\begin{tcolorbox}[title=Indepencia]
+\[
+	P(A \cap B ) =  P(A) \cdot P(B)
+.\] 
+\end{tcolorbox}
+
+Aplicando esto a la probablidad condicionada:
+
+\begin{tcolorbox}[title=Independencia en Condicionada ]
+\[
+	P(A|B) = \frac{P(A \cap B)}{ B } =  \frac{P(A) \cdot P(B)}{P(B)} = P(A)
+.\] 
+\end{tcolorbox}
+
+
+
+\subsection{ Bayes } 
+
+\begin{tcolorbox}[title=Teorema de Probabilidad Total]
+Partimos del  eorema de probablidad total, sea $A_i$ una partición del espacio muestral (osea $A_i \cup_{i=1}^{n} = \Omega$)
+\tcblower
+\[
+	P(B) =  P(B|A_1) \cdot P(A_1) + P(B|A_2) \cdot P(A_2)
+.\] 
+\end{tcolorbox}
+
+
+
+
+
+
+
+
+
+
+\end{document}

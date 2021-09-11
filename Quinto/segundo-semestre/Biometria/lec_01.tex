@@ -1,0 +1,123 @@
+\lecture{1}{dom 31 ago 2021 09:00}{Seguros Personales}
+
+\section{Factor Biómetrico}
+ 
+Es el beneficio por aber sobrevivido.
+
+\[
+    i (x;\; 0;\; t) =  \frac{l(x)}{l(x+t)}
+
+.\] 
+
+
+Hay tres variables qeu definen esta situación, {\color{blue} tiempo} ,  {\color{red}  
+Beneficio individual}, dependiendo la incognita podemos obtener la otra.
+
+\subsection{Descuento Biómetrico } 
+
+\[
+    \begin{align*}
+        1- d_b(x;\; 0;\; t) &= \frac{l(x+t)}{l(x)} \\
+        d_b(x;\; 0;\; t) &= q(x;0;t)
+    .\end{align*}
+.\] 
+
+
+
+\begin{table}[htpb]
+    \centering
+    \caption{caption}
+    \label{tab:label}
+    \begin{tabular}{ccc}
+ 🤯   & capitalización  &  Actualización \\[0.2cm] 
+   Tasa & $p^{-1}(x;t)-1$  &  $q(x;0;t)$ \\[0.2cm] 
+   factor & $p^{-1}(x;t)$  &  $1-q(x;0;t)$ 
+    \end{tabular}
+\end{table}
+
+
+En calculo financiero
+
+\[
+    v = \frac{1}{(1+i)}
+.\] 
+
+Por tanto en biómetrico
+
+\[
+q(x;0;t) = \frac{1}{p(x;t)^{-1}}
+.\] 
+
+
+\[
+p(x;t)^{-1} = \frac{1}{q(x;0;t)}
+.\] 
+
+A partir de esto podemos trabajar con la la guía de equivalencias.
+
+
+\section{Regimen Continuo}
+
+
+
+(calculo financiero) Dada una tasa de interés  $i$ y de descuente $d$, ambas  {\color{red} efectivas anuales }:
+\[
+    \delta = \ln(1+i) = -\ln(1-d)
+.\] 
+    
+El monto a cabo de t años, en regimen continuo 
+\[
+C_t = C_0 \cdot e^{t \cdot \delta}
+.\] 
+
+
+\subsection{ Equivalencia de Tasas }
+Tasa de interés nominal $i$  de capitalización $m$ (semestral 2, cuatrimestral 3, trimestral 4, biemstral 6, mensual 12, diaria 360) :
+
+\[
+    (1+i)^{m} = (1+i)
+.\] 
+
+
+
+Luego por analogía
+\[
+    \begin{align*}
+        \lambda  &= \ln p^{-1}(x;\;t) \\
+        - \lambda &= p(x;1) \\[0.2cm] 
+        p(x;1) &= e^{-\lambda}
+    .\end{align*}
+.\] 
+
+recordando que 
+
+\[
+    p(x;1) = e^{\int_0^{1} \m(x + t)dt}
+.\] 
+
+entonces se deduce que 
+\[
+    \lambda = \int_0^{1} \mu(x+t)dt
+.\] 
+
+si $\mu$ es constante
+\[
+    \lambda = \mu(x)
+.\] 
+
+
+
+\subsection{ Grupo de Sobrevieintes } 
+
+Esto es un proceso estocástico, recordar proceso de vida, muerte .
+
+
+
+
+
+
+
+
+
+
+

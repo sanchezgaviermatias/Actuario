@@ -1,0 +1,88 @@
+ \documentclass[a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage[spanish]{babel}
+\usepackage{amsmath, amssymb}
+
+%Programing
+\usepackage{listings}
+\usepackage{xcolor}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+
+
+% figure support
+\usepackage{import}
+\usepackage{xifthen}
+\pdfminorversion=7
+\usepackage{pdfpages}
+\usepackage{transparent}
+\newcommand{\incfig}[1]{%
+	\def\svgwidth{\columnwidth}
+	\import{./figures/}{#1.pdf_tex}
+}
+
+\pdfsuppresswarningpagegroup=1
+\lstset{style=mystyle}
+
+
+\title{Estimadores}
+\author{Matías Sanchez Gavier }
+
+\begin{document}
+\maketitle
+
+
+En general asumimos que partimos de una población con distribución normal, y tambíen siempre se supone muestreo aleatorio (las muestras son independientes e identicamente distribuidas). \\
+Sea una muestra aleatoria
+\[
+	X_1, X_2, \ldots, X_n
+.\] 
+
+donde  $ X_i \sim N(\mu, \sigma)$ \\
+
+Arriba mencione los supuestos generales de la teoría de estimación, aunque en general el supuesto el de normalidad se puede relajar bastante (en especial si la muestra es grande, mientras mas grande mas te podes alejar del supuesto de normal, osea la forma de bell shape). 
+
+Las variables de interés son la media, la varianza y la proporción (poblacionales)\\[1cm]
+poblacionales: $ \mu, \sigma^2,  \pi$\\
+estimaciones: $\overline{X}, S^{2}, \overline{p} $
+
+\section{Estimadores}
+Los Estadísticos son funciones de muestras aleatorias a un número real, $\mathbb{R}^{n} \mapsto  \mathbb{R}$.  Una forma de pensar a los estimadores es en funciones que dado que tome una muestra de tamaño n siempre me va a devolver un número real.
+
+Nos interesan los estimadores que contienen las variables de interés (por ejemplo $\mu$), y que tengan una distribución conocida (la distribución y los parámetros de la misma), esto es posible? yes.
+
+El estaistico más famoso es el de la media:
+\[
+    Z = \frac{\overline{X}-\mu}{n} \sim N(\mu=0, \sigma=1)
+.\] 
+
+
+
+
+\end{document}

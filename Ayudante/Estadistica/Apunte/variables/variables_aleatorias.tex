@@ -1,0 +1,108 @@
+\documentclass[a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage[spanish]{babel}
+\usepackage{amsmath, amssymb}
+
+%Programing
+\usepackage{listings}
+\usepackage{xcolor}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+
+
+% figure support
+\usepackage{import}
+\usepackage{xifthen}
+\pdfminorversion=7
+\usepackage{pdfpages}
+\usepackage{transparent}
+\newcommand{\incfig}[1]{%
+	\def\svgwidth{\columnwidth}
+	\import{./figures/}{#1.pdf_tex}
+}
+
+\pdfsuppresswarningpagegroup=1
+\lstset{style=mystyle}
+
+
+\title{Variables Aleatorias}
+\author{Matías Sanchez Gavier }
+
+\begin{document}
+\maketitle
+
+\section{Introducción}
+Esto es una  generlización del tema de probabilidad, las variables aleatorias son \textbf{funciones} $ X: \Omega \mapsto \mathbb{R}  $. Es decir que para cada resultado
+del experimento (\mathbb{E}) hay un valor asociado que es elemento de los reales. Esto es por la definición de funciones, para cada valor
+del dominio hay un valor asociado. 
+
+
+
+
+
+\subsection{ clasificación de variables aleatorias } 
+la clasificación se da por el dominio de $\omega$ (espacio muestral), cuando este conjunto es infinto y no contable (mira en wikipedia la definición) , se denomina {\color{blue} variable continua}  , por ejemplo
+el tiempo de vida de una persona es continuo, en cambio, en cualquier otro caso la variable es  {\color{blue} discreta} , por ejemplo la edad de muerte  (si es que la medimos en años enteros). 
+
+
+\section{variables discretas}
+en la práctica hay variables aleatorias muy comúnes, con pocas variables uno es capaz de representar la gran mayoría de los problemas en el mundo (wow) . las variables aleatorias discretas que vamos a  
+ver son: 
+
+\begin{itemize}
+	\item  binomial
+	\item  bernoulli (caso especial de binomial )
+	\item poisson 
+	\item binomial negativa 
+	\item pascal  (caso especial de binomial negativa )
+\end{itemize}
+
+en total son 3 distribuciones, y hay dos casos especiales.
+
+
+
+
+\subsection{ Condiciones Necesarias } 
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+\end{document}

@@ -1,0 +1,109 @@
+\lecture{2}{jue 02 sep 2021 09:54}{Subastas}
+
+\section{Subastas}
+
+Porqué hay subastas? te permite obtener información, y construir una  {\color{red} función de demanda} .
+
+
+
+
+\subsection{ Subastas abiertas } 
+son  {\color{red} Juegos dinámicos}, son juegos  a vos alta
+\begin{itemize}
+	\item \textbf{Subasta Inglesa}, empieza bajo y se ba subiendo
+		\item  \textbf{Subasta Holandesa}, El precio va bajando (empieza de uno muy alto)
+\end{itemize}
+
+\subsection{ Subastas Cerradas } 
+Son {\color{red} juegos estáticos} , escriben en un sobre y se decide el que mas apuesta.
+\begin{itemize}
+	\item  \textbf{Subasta de primer precio}, pago el precio que puse
+	\item \textbf{Subasta de segundo precio} , pago el segundo precio mas alto, hay incentivo a que no mienta.
+\end{itemize}
+
+\subsection{  Subata de Valores Privados } 
+La valuación del objeto es de nosotros, y \textbf{no varía segun lo que piensan los demás}. 
+Por ejemplo compra de camiseta de Maradona.  Es el que {\color{red} vamos a usar }
+
+
+\subsection{  Subata de Valores comunes } 
+Surge de la venta de pozos de petroleos,  cada bidder puede sacar diferetene cantidad de petroleo. Entonces
+mi valuación depende un poco \textbf{de lo que piensan los demás} .
+
+Nosotros vamos a jugar con valores privados, subastas cerrada, y conocemos todas las prefecias de los demás jugadores. ( \textbf{juego estático, con información completa} ).
+
+La utilidad de esto, en las apuestas, vemos el \textbf{reporte} (lo que apuesta), pero no vemos  la valuación del jugador.
+
+
+\subsection{ Notación } 
+\begin{itemize}
+	\item $v_i$ valuación del jugador  $i$.
+	\item  $b_i$ es el bid, cuanto subasta.
+	\item  El jugador $i$  gana la subasta si su apuesta es la mayor, $b_i> b_{-i}$ 
+	\item  Su utilidad es $v_i - P$ , donde $P$ es el precio que paga.
+	\item   Ordenamos los jugadores según su valuación  $v_1> v_2 > \ldots v_n$
+\end{itemize}
+
+Resumiendo:
+
+\begin{itemize}
+	\item hay $n$ bidders,  $n\ge 2$
+	\item  acciones o estrategias, $ b_i \in B_i \in \mathbb{R}^{+}$ para el jugador $i \in I$ 
+	\item  Pagos:  
+		\begin{itemize}
+			\item  en caso de ganar: $u_i = v_i - P$
+			\item  en caso de perder: $u_i = 0$ 
+			\item  en caso de empate: obtiene el objeto el que tenga mas valoración 
+		\end{itemize}	
+\end{itemize}
+
+En el caso de \textbf{ juego sobre cerrado (juego estático), información completa, con segundo precio} , no hay incentivo a cambiar, el equilibrio de nash esta en donde todos apuestan
+lo mismo que su valuación. porqué neceseraiamente para que $v_2$ pueda superar a  $v_1$ va a tener uqe superar  $b_1$ y esto significa una utilidad 
+negativa. $u = v_2 - v_1 < 0$, no hay incentivo a cambiar cuando todos apuestan su valuación. {\color{red}Equilibrio de Nash: }  
+\[
+	(b_1, b_2, b_3, \ldots, 0)	=  (v_1, 0, 0, \cdots, 0)
+.\] 
+
+El que pierde es el subastador .
+
+otro equilibrio de nash:
+
+\[
+	(b_1, b_2, b_3, \ldots, b_n)	=  (v_1, v_{2}, v_3, \cdots, v_n)
+.\] 
+
+
+otro equilibrio de nash:
+
+\[
+	(b_1, b_2, b_3, \ldots, b_n)	=  (v_2, v_{1}, v_3, \cdots, v_n)
+.\] 
+
+la ultilidad del jugador es, lo que paga menos su valuación: 
+\[
+u_2 = v_2 - v_2
+.\] 
+
+Este útlimo equilibrio quiere deceir que el bidder 1 paga la valuación de 2, y el bidder 2 paga la valuación de 1. Esto es un equilibrio de nash
+porqeu no hay incentivo al cambio. Este resultado no esta bueno, porqeu la valuación que se paga es menor
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

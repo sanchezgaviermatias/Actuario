@@ -1,0 +1,82 @@
+\documentclass[12pt]{article}
+
+\usepackage[marginparwidth=6cm, marginparsep=0.7cm]{geometry}
+%Package Matematika
+\usepackage{amsmath}
+%Style Gambar
+\usepackage{graphicx}
+\usepackage{floatrow}
+\floatsetup[widefigure]{margins=hangright,capposition=beside,
+capbesideposition={bottom, right},floatwidth=\textwidth}
+%Package Catatan di Margin
+\usepackage{sidenotes}
+%Style \maketitle
+\usepackage{titlesec}
+\makeatletter
+\renewcommand{\maketitle}{\bgroup\setlength{\parindent}{0pt}
+\begin{flushleft}
+  {\Huge\sffamily\bfseries\@title}
+  \vskip 1.5em
+  {\sffamily\@author}
+\end{flushleft}\egroup
+}
+\makeatother
+%Header and Footer Package
+\usepackage{fancyhdr}
+%Style Abstract
+\renewenvironment{abstract}
+	{\par{\bfseries \noindent \sffamily \abstractname.}}
+	{\vskip 0.1em \medskip\noindent \rule{\linewidth}{.5pt}}
+%Font Teks Utama dan Sesi
+\usepackage{lmodern}
+\renewcommand*\familydefault{\sfdefault} %% Only if the base font of the document is to be sans serif
+\usepackage[T1]{fontenc}
+\usepackage{sectsty}
+\sectionfont{\sffamily\fontsize{15}{15}\selectfont}
+\subsectionfont{\sffamily\fontsize{10}{5}\selectfont}
+%Style Hyperlink
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+%Pembahasaan ke Indonesia
+\renewcommand{\figurename}{\footnotesize Gambar}
+\renewcommand{\tablename}{\footnotesize Tabel}
+\renewcommand{\contentsname}{Daftar Isi}
+\setlength{\parindent}{0in}
+%==============STYLE BERAKHIR==============%
+\title{Esatadístca Descriptiva}
+\author{Matías Sanchez Gavier}
+\begin{document}
+\maketitle
+
+\section{Medidas de Posición}
+Iniciamos con las princiales medidas\\ [0.2cm] 
+Media $\mu = \overline{X} = \frac{\sum_{i=1}^{n} X_i}{n}$ \\ [0.2cm]  
+Varianza 
+\[
+ \begin{align*}
+  \sigma^{2}  &=  \frac{\sum_{i=1}^{n} (X_i -  \mu )^{2}}{n} \\[0.2cm]  
+   \sigma^{2} &= \frac{\sum_{i=1}^{n}X_i^{2}}{n}  -  \overline{X}^{2} \\[0.2cm]  
+  S^{2} &=  \frac{\sum_{i=1}^{n} (X_i - \overline{X})^{2}}{n-1}   
+  \end{align*}   .\] \\[0.2cm]  
+
+Desvío: 
+\[
+\begin{align*}
+\sigma &=   \sqrt{\sigma^{2}} \\
+s &= \sqrt{S^{2}}  \\
+.\end{align*}
+.\] 
+Coeficiente de Variación: $CV= \frac{\sigma}{\mu}$
+
+
+
+
+
+
+\end{document}
